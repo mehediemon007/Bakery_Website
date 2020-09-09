@@ -11,7 +11,7 @@ $(function () {
 });
 
 $(document).ready(function () {
-  $(".scrollTop").on("click", function () {
+  $(".scRoll").on("click", function () {
     $("html").scrollTop(0);
   });
 });
