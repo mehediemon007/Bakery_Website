@@ -191,8 +191,64 @@ hr {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Media Query */
+.point-left,
+.point-right {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+}
 
+.point-left::before,
+.point-right::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -12px;
+  left: 50%;
+  background-color: inherit;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: 1;
+}
+
+.menu-item-desc {
+  color: #212529;
+  padding: 50px 10px;
+  margin: auto;
+}
+
+.menu-item-desc h6 {
+  color: #c69963;
+  font-size: 20px;
+}
+
+.menu-item-desc h1 {
+  color: #101d2c;
+  font-family: "Teko", sans-serif;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+/* Chefs */
+
+.card-body h1 {
+  font-size: 25px;
+  font-family: "Teko", sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.card-body h6 {
+  color: #c69963;
+  font-size: 16px;
+}
+
+footer {
+  background-color: #101d2c;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Media Query */
 @media (min-width: 576px) {
   .nav-brand {
     max-width: 150px;
@@ -200,6 +256,13 @@ hr {
   .hamburger-menu {
     top: 35px;
     right: 25px;
+  }
+  .point-left::before,
+  .point-right::before {
+    display: none;
+  }
+  .menu-item-desc {
+    padding: 50px 20px;
   }
 }
 
@@ -261,5 +324,29 @@ hr {
 
   .nav-link:hover::before {
     transform: scaleX(1);
+  }
+}
+
+@media (min-width: 1200px) {
+  .point-left::before,
+  .point-right::before {
+    display: block;
+    top: 50%;
+    left: initial;
+    transform: translate(0, -50%) rotate(45deg);
+  }
+
+  .point-left::before {
+    left: -12px;
+  }
+  .point-right::before {
+    right: -12px;
+  }
+  .menu-item-desc p {
+    display: none;
+  }
+  .menu-item-desc .btn {
+    color: #fff !important;
+    background-color: #c69963;
   }
 }
