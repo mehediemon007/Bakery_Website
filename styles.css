@@ -164,6 +164,33 @@ header > .container {
   background-color: #c69963;
 }
 
+/* Menu */
+
+.menu {
+  background-color: #101d2c;
+}
+
+.shop-info i {
+  font-size: 50px;
+  color: #c69963;
+}
+
+.shop-info h1 {
+  font-family: "Teko", sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.shop-info p,
+.shop-info address {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 /* Media Query */
 
 @media (min-width: 576px) {
