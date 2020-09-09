@@ -9,3 +9,9 @@ $(function () {
     duration: 1000,
   });
 });
+
+$(document).ready(function () {
+  $(".scrollTop").on("click", function () {
+    $("html").scrollTop(0);
+  });
+});
